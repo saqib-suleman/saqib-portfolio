@@ -3,18 +3,41 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 import Tech from "./Tech";
+import { useEffect, useMemo, useState } from "react";
 
 const gradient =
   "linear-gradient(149deg, rgba(2,0,36,0.8407738095238095) 0%, rgba(137,126,230,1) 50%, rgba(255,118,180,0.6418942577030813) 99%)";
 
-const textStyles = {
-  background: gradient,
-  padding: "1.5rem",
-  borderRadius: "2rem",
-  width: "140%",
-};
-
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  const textStyles = useMemo(() => {
+    return {
+      background: gradient,
+      padding: isMobile ? "0.7rem" : "1.5rem",
+      borderRadius: isMobile ? "0.5rem" : "2rem",
+      width: isMobile ? "90%" : "140%",
+      fontSize: isMobile ? ".8rem" : "1.5rem",
+    };
+  }, [isMobile]);
+
+  useEffect(() => {
+    // Check if it's a mobile screen (e.g., screen width less than 768px)
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Attach the event listener for resizing
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <section className={`relative w-full h-screen mx-auto overflow-hidden`}>
       <div
@@ -28,7 +51,7 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 pink-gradient" />
         </div>
 
-        <div style={{ zIndex: 1, width: "50%" }}>
+        <div style={{ zIndex: 1, width: isMobile ? "80%" : "50%" }}>
           <h1 className={`${styles.heroHeadText} text-white`}>
             <span className="text-[#f72585]">Hello,</span> and welcome to my
             corner of the web!
@@ -57,7 +80,9 @@ const Hero = () => {
 
       <ComputersCanvas />
 
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+      <div
+        className={`absolute xs:bottom-10 bottom-5 w-full flex justify-center items-center`}
+      >
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
