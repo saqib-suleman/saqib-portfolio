@@ -1,4 +1,5 @@
 import { Html, useProgress } from "@react-three/drei";
+import { BLUE, PINK } from "../constants";
 
 const CanvasLoader = () => {
   const { progress } = useProgress();
@@ -12,18 +13,19 @@ const CanvasLoader = () => {
         alignItems: "center",
         flexDirection: "column",
         marginLeft: "40rem",
+        textAlign: "center",
       }}
     >
       <span className="canvas-loader"></span>
       <p
         style={{
-          fontSize: 14,
+          fontSize: 17,
           color: "#F1F1F1",
           fontWeight: 800,
           marginTop: 40,
         }}
       >
-        {progress.toFixed(2)}%
+        Loading awesomeness <br /> {progress.toFixed(2)}%
       </p>
     </Html>
   );
