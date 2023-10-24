@@ -8,12 +8,11 @@ const Tech = () => {
   return (
     <div className="flex flex-row flex-wrap justify-center gap-10">
       {technologies.map((technology) => (
-        <div
-          className="w-28 h-28"
-          key={technology.name}
-          title={technology.name.toUpperCase()}
-        >
+        <div className="w-28 h-28" key={technology.name}>
           <BallCanvas icon={technology.icon} />
+          <p style={{ textAlign: "center", marginTop: "0.1rem" }}>
+            {technology.name}
+          </p>
         </div>
       ))}
     </div>

@@ -121,11 +121,11 @@ const technologies = [
   //   icon: docker,
   // },
   {
-    name: 'NestJs',
+    name: 'NestJS',
     icon: nest,
   },
   {
-    name: 'NextJs',
+    name: 'NextJS',
     icon: next,
   },{
     name: 'MUI',
