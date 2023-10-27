@@ -14,10 +14,10 @@ const Hero = () => {
   const textStyles = useMemo(() => {
     return {
       background: gradient,
-      padding: isMobile ? "0.7rem" : "1.5rem",
+      padding: isMobile ? "0.8rem" : "1.5rem",
       borderRadius: isMobile ? "0.5rem" : "2rem",
       width: isMobile ? "90%" : "140%",
-      fontSize: isMobile ? ".8rem" : "1.5rem",
+      fontSize: isMobile ? "1rem" : "1.5rem",
     };
   }, [isMobile]);
 
@@ -51,7 +51,7 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 pink-gradient" />
         </div>
 
-        <div style={{ zIndex: 1, width: isMobile ? "80%" : "50%" }}>
+        <div style={{ zIndex: 1, width: isMobile ? "90%" : "50%" }}>
           <h1 className={`${styles.heroHeadText} text-white`}>
             <span className="text-[#f72585]">Hello,</span> and welcome to my
             corner of the web!
