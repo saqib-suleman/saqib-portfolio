@@ -78,7 +78,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <ComputersCanvas />
+      {!isMobile && <ComputersCanvas />}
 
       <div
         className={`absolute xs:bottom-10 bottom-5 w-full flex justify-center items-center`}
