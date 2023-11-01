@@ -57,7 +57,7 @@ const Hero = () => {
             corner of the web!
           </h1>
           <br />
-          <div className="short:flex short:flex-row short:w-[60vw]">
+          <div className="short:flex short:flex-row short:w-[60vw] shorter:w-[90vw]">
             <p
               style={textStyles}
               className={`${styles.heroSubText} mt-2 text-white-100 short:mr-10`}
