@@ -16,7 +16,7 @@ module.exports = {
         card: "0px 35px 120px -15px #211e35",
       },
       screens: {
-        xs: "(min-width: 450px)",
+        xs: "450px",
         short: { 'raw': '(max-height: 900px) and (min-width: 700px)' },
         shorter: { 'raw': '(max-height: 800px) and (min-width: 1000px)' }
       },
