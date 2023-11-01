@@ -51,7 +51,7 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 pink-gradient" />
         </div>
 
-        <div style={{ zIndex: 1, width: isMobile ? "90%" : "50%" }}>
+        <div style={{ zIndex: 1, width: isMobile ? "90%" : "65%" }}>
           <h1 className={`${styles.heroHeadText} text-white`}>
             <span className="text-[#f72585]">Hello,</span> and welcome to my
             corner of the web!
@@ -83,7 +83,7 @@ const Hero = () => {
       {!isMobile && <ComputersCanvas />}
 
       <div
-        className={`absolute xs:bottom-10 bottom-5 w-full flex justify-center items-center`}
+        className={`absolute xs:bottom-10 md:bottom-5 bottom-5 w-full flex justify-center items-center`}
       >
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
