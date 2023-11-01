@@ -41,7 +41,7 @@ const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto overflow-hidden`}>
       <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[120px] short:top-[60px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
         <div
           style={{ zIndex: 1 }}
@@ -57,24 +57,26 @@ const Hero = () => {
             corner of the web!
           </h1>
           <br />
-          <p
-            style={textStyles}
-            className={`${styles.heroSubText} mt-2 text-white-100`}
-          >
-            🚀 I'm Saqib, your trusted ally in Full Stack MERN Stack Web
-            Development. My mission is to turn your digital aspirations into
-            reality, tailoring solutions to your unique needs.
-          </p>
-          <br />
-          <p
-            style={textStyles}
-            className={`${styles.heroSubText} mt-2 text-white-100`}
-          >
-            💡 Amid the ever-changing digital landscape, I specialize in the
-            MERN stack (MongoDB, Express.js, React, Node.js). I blend
-            technology, creativity, and unwavering commitment to craft bespoke
-            web solutions that make you stand out.
-          </p>
+          <div className="short:flex short:flex-row short:w-[60vw]">
+            <p
+              style={textStyles}
+              className={`${styles.heroSubText} mt-2 text-white-100 short:mr-10`}
+            >
+              🚀 I'm Saqib, your trusted ally in Full Stack MERN Stack Web
+              Development. My mission is to turn your digital aspirations into
+              reality, tailoring solutions to your unique needs.
+            </p>
+            <br />
+            <p
+              style={textStyles}
+              className={`${styles.heroSubText} mt-2 text-white-100`}
+            >
+              💡 Amid the ever-changing digital landscape, I specialize in the
+              MERN stack (MongoDB, Express.js, React, Node.js). I blend
+              technology, creativity, and unwavering commitment to craft bespoke
+              web solutions that make you stand out.
+            </p>
+          </div>
         </div>
       </div>
 
