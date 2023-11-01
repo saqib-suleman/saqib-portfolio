@@ -73,6 +73,15 @@ const Navbar = () => {
             isMobile ? "hidden" : ""
           } sm:flex flex-row gap-10`}
         >
+          <a
+            className={`text-white text-[18px] font-medium cursor-pointer`}
+            href="/Saqib_Suleman's_Resume.pdf"
+            download="Saqib_Suleman's_Resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Download CV
+          </a>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
