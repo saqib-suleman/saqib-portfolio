@@ -17,7 +17,7 @@ const Hero = () => {
       padding: isMobile ? "0.8rem" : "1.5rem",
       borderRadius: isMobile ? "0.5rem" : "2rem",
       width: isMobile ? "90%" : "140%",
-      fontSize: isMobile ? "1rem" : "1.5rem",
+      // fontSize: isMobile ? "1rem" : "1.5rem",
     };
   }, [isMobile]);
 
@@ -41,7 +41,7 @@ const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto overflow-hidden`}>
       <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[120px] lg:top-[120px] md:top-[60px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
         <div
           style={{ zIndex: 1 }}
@@ -51,37 +51,39 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 pink-gradient" />
         </div>
 
-        <div style={{ zIndex: 1, width: isMobile ? "90%" : "50%" }}>
+        <div style={{ zIndex: 1, width: isMobile ? "90%" : "65%" }}>
           <h1 className={`${styles.heroHeadText} text-white`}>
             <span className="text-[#f72585]">Hello,</span> and welcome to my
             corner of the web!
           </h1>
           <br />
-          <p
-            style={textStyles}
-            className={`${styles.heroSubText} mt-2 text-white-100`}
-          >
-            🚀 I'm Saqib, your trusted ally in Full Stack MERN Stack Web
-            Development. My mission is to turn your digital aspirations into
-            reality, tailoring solutions to your unique needs.
-          </p>
-          <br />
-          <p
-            style={textStyles}
-            className={`${styles.heroSubText} mt-2 text-white-100`}
-          >
-            💡 Amid the ever-changing digital landscape, I specialize in the
-            MERN stack (MongoDB, Express.js, React, Node.js). I blend
-            technology, creativity, and unwavering commitment to craft bespoke
-            web solutions that make you stand out.
-          </p>
+          <div>
+            <p
+              style={textStyles}
+              className={`${styles.heroSubText} mt-2 text-white-100`}
+            >
+              🚀 I'm Saqib, your trusted ally in Full Stack MERN Stack Web
+              Development. My mission is to turn your digital aspirations into
+              reality, tailoring solutions to your unique needs.
+            </p>
+            <br />
+            <p
+              style={textStyles}
+              className={`${styles.heroSubText} mt-2 text-white-100`}
+            >
+              💡 Amid the ever-changing digital landscape, I specialize in the
+              MERN stack (MongoDB, Express.js, React, Node.js). I blend
+              technology, creativity, and unwavering commitment to craft bespoke
+              web solutions that make you stand out.
+            </p>
+          </div>
         </div>
       </div>
 
       {!isMobile && <ComputersCanvas />}
 
       <div
-        className={`absolute xs:bottom-10 bottom-5 w-full flex justify-center items-center`}
+        className={`absolute xs:bottom-10 md:bottom-5 bottom-5 w-full flex justify-center items-center`}
       >
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
